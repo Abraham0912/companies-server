@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   
   namespace :api do
     namespace :v1 do
-      get 'empresas'=> 'companies#index'
+      # get 'companies'=> 'companies#index'
+      # get 'companies/:id' => 'companies#show'
+      resources :companies
     end
   end
 end
