@@ -4,11 +4,11 @@ class Api::V1::CompaniesController < ApplicationController
 
     def index
         @companies = Company.all();
-        render json: @companies, include: set_models
+        render json: @companies.order(:id) # , include: set_models
     end
 
     def show
-        render json: @empresa, include: set_models
+        render json: @empresa# , include: set_models
     end
 
     def create
@@ -30,7 +30,7 @@ class Api::V1::CompaniesController < ApplicationController
 
     def destroy
         empresa.destroy
-        # reder json: message: "Eliminado exitosamente"
+        render json: {'mensaje':'Elemento borrados exitosamente'}
     end
 
     private
