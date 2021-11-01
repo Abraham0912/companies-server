@@ -1,0 +1,2 @@
+class AcquisitionDevelopmentMaintenance < ApplicationRecord
+end

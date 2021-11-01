@@ -4,6 +4,7 @@ Rails.application.routes.draw do
       resources :companies
       resources :policies
       resources :telecommunication_securities
+      resources :acquisition_development_maintenances
     end
   end
 end
