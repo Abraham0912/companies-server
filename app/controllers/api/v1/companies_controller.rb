@@ -4,11 +4,11 @@ class Api::V1::CompaniesController < ApplicationController
 
     def index
         @companies = Company.all();
-        render json: @companies.order(:id) # , include: set_models
+        render json: @companies.order(:id) , include: set_models
     end
 
     def show
-        render json: @empresa# , include: set_models
+        render json: @empresa, include: set_models
     end
 
     def create
