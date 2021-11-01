@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_01_191758) do
+ActiveRecord::Schema.define(version: 2021_11_01_203950) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +29,18 @@ ActiveRecord::Schema.define(version: 2021_11_01_191758) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["company_id"], name: "index_policies_on_company_id"
+  end
+
+  create_table "telecommunication_securities", force: :cascade do |t|
+    t.string "network_controls"
+    t.string "security_mechanisms"
+    t.string "segregation_networks"
+    t.string "procedures"
+    t.string "exchange"
+    t.string "mesage_service"
+    t.string "confidentiality"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   add_foreign_key "policies", "companies"

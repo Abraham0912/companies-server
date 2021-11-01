@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  network_controls: MyString
+  security_mechanisms: MyString
+  segregation_networks: MyString
+  procedures: MyString
+  exchange: MyString
+  mesage_service: MyString
+  confidentiality: MyString
+
+two:
+  network_controls: MyString
+  security_mechanisms: MyString
+  segregation_networks: MyString
+  procedures: MyString
+  exchange: MyString
+  mesage_service: MyString
+  confidentiality: MyString

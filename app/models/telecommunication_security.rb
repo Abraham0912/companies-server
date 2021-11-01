@@ -1,0 +1,2 @@
+class TelecommunicationSecurity < ApplicationRecord
+end
