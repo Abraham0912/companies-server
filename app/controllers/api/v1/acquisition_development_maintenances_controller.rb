@@ -18,7 +18,7 @@ class Api::V1::AcquisitionDevelopmentMaintenancesController < ApplicationControl
     @acquisition_development_maintenance = AcquisitionDevelopmentMaintenance.new(acquisition_development_maintenance_params)
 
     if @acquisition_development_maintenance.save
-      render json: @acquisition_development_maintenance, status: :created, location: @acquisition_development_maintenance
+      render json: @acquisition_development_maintenance, status: :created
     else
       render json: @acquisition_development_maintenance.errors, status: :unprocessable_entity
     end

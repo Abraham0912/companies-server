@@ -18,7 +18,7 @@ class Api::V1::TelecommunicationSecuritiesController < ApplicationController
     @telecommunication_security = TelecommunicationSecurity.new(telecommunication_security_params)
 
     if @telecommunication_security.save
-      render json: @telecommunication_security, status: :created, location: @telecommunication_security
+      render json: @telecommunication_security, status: :created
     else
       render json: @telecommunication_security.errors, status: :unprocessable_entity
     end
