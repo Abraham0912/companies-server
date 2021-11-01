@@ -18,7 +18,7 @@ class Api::V1::AcquisitionDevelopmentMaintenancesController < ApplicationControl
     @acquisition_development_maintenance = AcquisitionDevelopmentMaintenance.new(acquisition_development_maintenance_params)
 
     if @acquisition_development_maintenance.save
-      render json: @acquisition_development_maintenance, status: :created
+      render json: @acquisition_development_maintenance, status: :created, location: @acquisition_development_maintenance
     else
       render json: @acquisition_development_maintenance.errors, status: :unprocessable_entity
     end
@@ -46,6 +46,6 @@ class Api::V1::AcquisitionDevelopmentMaintenancesController < ApplicationControl
 
     # Only allow a list of trusted parameters through.
     def acquisition_development_maintenance_params
-      params.require(:acquisition_development_maintenance).permit(:policy, :environment, :functionality, :acceptance)
+      params.require(:acquisition_development_maintenance).permit(:policy, :environment, :functionality, :acceptance,:company_id)
     end
 end

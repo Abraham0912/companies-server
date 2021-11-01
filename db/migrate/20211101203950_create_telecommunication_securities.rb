@@ -8,7 +8,7 @@ class CreateTelecommunicationSecurities < ActiveRecord::Migration[6.1]
       t.string :exchange
       t.string :mesage_service
       t.string :confidentiality
-
+      t.references :company, null: false, foreign_key: true
       t.timestamps
     end
   end

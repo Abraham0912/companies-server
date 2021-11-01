@@ -46,6 +46,6 @@ class Api::V1::TelecommunicationSecuritiesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def telecommunication_security_params
-      params.require(:telecommunication_security).permit(:network_controls, :security_mechanisms, :segregation_networks, :procedures, :exchange, :mesage_service, :confidentiality)
+      params.require(:telecommunication_security).permit(:network_controls, :security_mechanisms, :segregation_networks, :procedures, :exchange, :mesage_service, :confidentiality,:company_id)
     end
 end

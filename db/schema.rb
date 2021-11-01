@@ -20,8 +20,10 @@ ActiveRecord::Schema.define(version: 2021_11_01_204913) do
     t.string "environment"
     t.string "functionality"
     t.string "acceptance"
+    t.bigint "company_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["company_id"], name: "index_acquisition_development_maintenances_on_company_id"
   end
 
   create_table "companies", force: :cascade do |t|
@@ -48,9 +50,13 @@ ActiveRecord::Schema.define(version: 2021_11_01_204913) do
     t.string "exchange"
     t.string "mesage_service"
     t.string "confidentiality"
+    t.bigint "company_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["company_id"], name: "index_telecommunication_securities_on_company_id"
   end
 
+  add_foreign_key "acquisition_development_maintenances", "companies"
   add_foreign_key "policies", "companies"
+  add_foreign_key "telecommunication_securities", "companies"
 end

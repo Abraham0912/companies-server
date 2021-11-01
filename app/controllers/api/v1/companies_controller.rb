@@ -40,7 +40,7 @@ class Api::V1::CompaniesController < ApplicationController
     end
 
     def set_models
-        @models = [:policy]
+        @models = [:policy,:telecommunication_security, :acquisition_development_maintenance]
     end
     
     def empresa_params

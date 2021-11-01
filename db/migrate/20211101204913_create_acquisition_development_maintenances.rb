@@ -5,7 +5,7 @@ class CreateAcquisitionDevelopmentMaintenances < ActiveRecord::Migration[6.1]
       t.string :environment
       t.string :functionality
       t.string :acceptance
-
+      t.references :company, null: false, foreign_key: true
       t.timestamps
     end
   end
