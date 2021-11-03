@@ -36,5 +36,12 @@ module RegistrosApi
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
+    #LA SIGUIENTE CONFIGURACION ES PARA PERMITIR EL CONSUMO DEL CLEINTE REACT, SE OBTO POR PONER EN config/initializers/cors.rb DE ACUERDO A LA DOCUEMNTACION rack-cors
+    config.middleware.insert_before 0, Rack::Cors do
+      allow do
+        origins 'http://localhost:3000'
+        resource '*', headers: :any, methods: [:get, :post, :patch, :put]
+      end
+    end
   end
 end
