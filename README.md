@@ -1,24 +1,13 @@
-# README
+# README(incomplet)
+## Steps
+Require postgres, ruby 3.0 and rails 6.1
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+0.- bundle install
 
-Things you may want to cover:
+1.- rails db:create
 
-* Ruby version
+2.-rails db:migrate
 
-* System dependencies
+3.- rails s --port 3002(puerto recomendado para funcionar with client)
 
-* Configuration
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
